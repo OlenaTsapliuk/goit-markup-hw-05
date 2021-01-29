@@ -18,12 +18,13 @@ html {
 :root {
   --primary-text-color: #757575;
   --title-text-color: #212121;
-  --accent-color: #2196f3;
+  --accent-color: rgb(32, 148, 243);
   --primary-white-color: #ffffff;
   --footer-heroy-background-color: #2f303a;
   --background-komandy: #f5f4fa;
   --color-link-footer: rgba(255, 255, 255, 0.6);
   --icon-color: #afb1b8;
+  --bg-overlay-card: rgba(33, 150, 243, 0.9);
 }
 
 body {
@@ -606,6 +607,30 @@ ul {
   margin-left: 30px;
   margin-top: 30px;
 }
+.card {
+  position: relative;
+}
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding: 63px 24px;
+  background-color: var(--bg-overlay-card);
+}
+.overlay-text {
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 1.56;
+  letter-spacing: 0.03em;
+  color: var(--primary-white-color);
+}
+.portfolio-description {
+  padding: 20px 24px;
+  border: 1px solid #eeeeee;
+}
+
 /* .portfolio-menu .item {
   width: calc((100% - 60px) / 3);
   margin-right: 30px;
@@ -617,7 +642,3 @@ ul {
 .portfolio-menu .item:nth-last-child(-n + 3) {
   margin-bottom: 0;
 } */
-.portfolio-description {
-  padding: 20px 24px;
-  border: 1px solid #eeeeee;
-}
