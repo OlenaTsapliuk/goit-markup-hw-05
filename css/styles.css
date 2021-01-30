@@ -177,6 +177,11 @@ ul {
   height: 4px;
   background-color: var(--accent-color);
   border-radius: 2px;
+  transform: scaleX(0);
+  transition: transform var(--time) var(--animation-function);
+}
+.site-nav .link.current:hover::after {
+  transform: scaleX(1);
 }
 
 /* Секция  */
