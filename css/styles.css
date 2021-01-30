@@ -604,6 +604,7 @@ ul {
   flex-basis: calc(100% / 3 - 30px);
   margin-left: 30px;
   margin-top: 30px;
+  outline: 1px solid #eeeeee;
 }
 .card {
   position: relative;
@@ -626,7 +627,6 @@ ul {
 }
 .portfolio-description {
   padding: 20px 24px;
-  border: 1px solid #eeeeee;
 }
 
 /* .portfolio-menu .item {
