@@ -181,7 +181,8 @@ ul {
   transform: scaleX(0);
   transition: transform var(--time) var(--animation-function);
 }
-.site-nav .link.current:hover::after {
+.site-nav .link.current:hover::after,
+.site-nav .link.current:focus::after {
   transform: scaleX(1);
 }
 
@@ -594,11 +595,7 @@ ul {
   background-color: var(--accent-color);
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
-.portfolio-menu .portfolio:hover,
-.portfolio-menu .portfolio:focus {
-  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
-    1px 4px 6px rgba(0, 0, 0, 0.16);
-}
+
 .button-item {
   display: flex;
   justify-content: center;
@@ -630,9 +627,20 @@ ul {
   margin-left: 30px;
   margin-top: 30px;
   outline: 1px solid #eeeeee;
+  transition: box-shadow var(--time) var(--animation-function);
+}
+.portfolio-menu .item:hover,
+.portfolio-menu .item:focus {
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+    1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 .card {
   position: relative;
+  overflow: hidden;
+}
+.portfolio:hover .overlay,
+.portfolio:focus .overlay {
+  transform: translateY(0);
 }
 .overlay {
   position: absolute;
@@ -642,6 +650,8 @@ ul {
   height: 100%;
   padding: 63px 24px;
   background-color: var(--bg-overlay-card);
+  transform: translateY(100%);
+  transition: transform var(--time) var(--animation-function);
 }
 .overlay-text {
   font-weight: normal;
