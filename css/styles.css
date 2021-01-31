@@ -250,16 +250,21 @@ ul {
   width: 1600px;
   height: 1024px;
   background-color: rgba(0, 0, 0, 0.2);
+  opacity: 1;
+  transition: opacity var(--time) var(--animation-function);
 }
 .backdrop.is-hidden {
   opacity: 0;
   pointer-events: none;
 }
+.backdrop.is-hidden .modal-window {
+  transform: translate(-50%, -50%) scale(0.8);
+}
 .modal-window {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%) scale(1);
 
   width: 528px;
   height: 581px;
@@ -267,6 +272,8 @@ ul {
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
+
+  transition: transform var(--time) var(--animation-function);
 }
 .modal-close {
   position: absolute;
@@ -612,6 +619,7 @@ ul {
   display: inline-block;
   margin-top: 0;
   margin-bottom: 0;
+  transition: box-shadow var(--time) var(--animation-function);
 }
 .portfolio-menu {
   padding: 0;
@@ -627,10 +635,10 @@ ul {
   margin-left: 30px;
   margin-top: 30px;
   outline: 1px solid #eeeeee;
-  transition: box-shadow var(--time) var(--animation-function);
 }
-.portfolio-menu .item:hover,
-.portfolio-menu .item:focus {
+
+.portfolio:hover,
+.portfolio:focus {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
     1px 4px 6px rgba(0, 0, 0, 0.16);
 }
