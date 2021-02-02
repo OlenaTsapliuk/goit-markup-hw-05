@@ -179,15 +179,22 @@ ul {
   height: 4px;
   background-color: var(--accent-color);
   border-radius: 2px;
+  animation-name: scale;
+  animation-duration: 250ms;
+  animation-timing-function: linear;
+  animation-fill-mode: forwards;
   transform-origin: center left;
-  transform: scaleX(0);
-  transition: transform var(--time) var(--animation-function);
-}
-.site-nav .link.current:hover::after,
-.site-nav .link.current:focus::after {
-  transform: scaleX(1);
 }
 
+@keyframes scale {
+  0% {
+    transform: scaleX(0);
+  }
+
+  100% {
+    transform: scaleX(1);
+  }
+}
 /* Секция  */
 .section,
 .workers {
@@ -666,6 +673,7 @@ ul {
   transition: transform var(--time) var(--animation-function);
 }
 .overlay-text {
+  margin: 0;
   font-weight: normal;
   font-size: 18px;
   line-height: 1.56;
