@@ -671,6 +671,7 @@ ul {
   background-color: var(--bg-overlay-card);
   transform: translateY(100%);
   transition: transform var(--time) var(--animation-function);
+  z-index: 2;
 }
 .overlay-text {
   margin: 0;
