@@ -59,6 +59,8 @@ body {
 }
 img {
   display: block;
+  max-width: 100%;
+  height: auto;
 }
 ul {
   padding: 0;
@@ -352,6 +354,8 @@ ul {
   background-color: rgba(47, 48, 58, 0.8);
 }
 .posters-text {
+  margin-top: 0;
+  margin-bottom: 0;
   font-weight: bold;
   font-size: 14px;
   line-height: 1.14;
