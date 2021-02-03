@@ -660,6 +660,7 @@ ul {
 .portfolio:hover .overlay,
 .portfolio:focus .overlay {
   transform: translateY(0);
+  opacity: 1;
 }
 .overlay {
   position: absolute;
@@ -671,7 +672,7 @@ ul {
   background-color: var(--bg-overlay-card);
   transform: translateY(100%);
   transition: transform var(--time) var(--animation-function);
-  z-index: 2;
+  opacity: 0;
 }
 .overlay-text {
   margin: 0;
